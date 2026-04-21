@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fashion Products</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Apparel & Fashion</h2>
+
+<div class="product">
+    <h3>T-Shirt</h3>
+    <p>$20</p>
+    <button onclick="buyProduct('T-Shirt', 20)">Buy</button>
+</div>
+
+<div class="product">
+    <h3>Jacket</h3>
+    <p>$50</p>
+    <button onclick="buyProduct('Jacket', 50)">Buy</button>
+</div>
+
+<script>
+function buyProduct(name, price) {
+    localStorage.setItem("productName", name);
+    localStorage.setItem("productPrice", price);
+    window.location.href = "Buy.html";
+}
+</script>
+
+</body>
+</html>

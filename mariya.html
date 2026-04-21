@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mariya's Online Shop</title>
+
+    <style>
+        body {
+            font-family: "Times New Roman";
+            text-align: center;
+            background: #f4f4f4;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 20px;
+        }
+
+        /* 🔥 Animated Title */
+        .typing {
+    font-size: 36px;
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    margin: auto;
+
+    animation: typing 4s steps(25) infinite;
+}
+
+        @keyframes typing {
+            0% { width: 0 }
+            50% { width: 100% }
+            100% { width: 0 }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        /* Categories */
+        .container {
+            padding: 30px;
+        }
+
+    .category {
+    display: block;              /* makes it vertical */
+    margin: 15px auto;           /* center + spacing */
+    padding: 20px;
+    background: white;
+    width: 220px;                /* same box size as before */
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    text-align: center;
+}
+
+        .category:hover {
+            background: #ddd;
+            transform: scale(1.05);
+        }
+.fashion { background: #ffd6e0; }
+.footwear { background: #d6f0ff; }
+.cosmetics { background: #ffe6cc; }
+.accessories { background: #e6ffe6; }
+.children { background: #fff2b3; }
+.gifts { background: #e0d6ff; }
+header {
+    background: #333;
+    padding: 15px;
+}
+
+/* Flex layout for text + image */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Your animated title */
+.typing {
+    font-size: 32px;
+    color: white;
+}
+
+/* Owner image style */
+.owner img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="header-container">
+
+        <h1 class="typing">Mariya's Online Shop</h1>
+
+        <div class="owner">
+            <img src="https://raw.githubusercontent.com/mariyarahman127-stack/Mariya_shop/main/WhatsApp%20Image%202025-02-21%20at%2023.15.45_7fcac3fe.jpg" alt="Owner Image" style="width:80px;height:80px;border-radius:50%;">
+        </div>
+
+    </div>
+</header>
+<header>
+    <h2 style="color: white; margin-top: 10px;">Welcome to the best place for all your shopping needs!</h2>
+</header>
+
+<!-- CATEGORY SECTION -->
+<div class="container">
+
+    <div class="category fashion" onclick="go('fashion.html')">👗 Apparel & Fashion</div>
+    <div class="category footwear" onclick="go('footwear.html')">👟 Footwear</div>
+    <div class="category cosmetics" onclick="go('cosmetics.html')">💄 Cosmetics</div>
+    <div class="category accessories" onclick="go('accessories.html')">👜 Accessories</div>
+    <div class="category children" onclick="go('children.html')">🧸 Children Goods</div>
+    <div class="category gifts" onclick="go('gifts.html')">🎁 Gifts</div>
+
+</div>
+
+
+<script>
+function go(page) {
+    window.location.href = page;
+}
+</script>
+
+</body>
+</html>

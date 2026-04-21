@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cosmetics</title>
+<style>
+body { font-family: Arial; text-align:center; }
+.product { display:inline-block; margin:20px; padding:15px; border:1px solid #ccc; }
+button { background:green; color:white; padding:10px; border:none; }
+</style>
+</head>
+<body>
+
+<h2>Cosmetics & Skincare</h2>
+
+<div class="product">
+    <h3>Face Cream</h3>
+    <p>$15</p>
+    <button onclick="buy('Face Cream',15)">Buy</button>
+</div>
+
+<script>
+function buy(n,p){
+    localStorage.setItem("productName",n);
+    localStorage.setItem("productPrice",p);
+    window.location.href="Buy.html";
+}
+</script>
+
+</body>
+</html>

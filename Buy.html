@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirm Purchase</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            display: inline-block;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Confirm Your Order</h2>
+    <p id="name"></p>
+    <p id="price"></p>
+
+    <button onclick="confirmBuy()">Confirm</button>
+    <button onclick="cancelBuy()">Cancel</button>
+</div>
+
+<script>
+document.getElementById("name").innerText =
+    "Product: " + localStorage.getItem("productName");
+
+document.getElementById("price").innerText =
+    "Price: $" + localStorage.getItem("productPrice");
+
+function confirmBuy() {
+    alert("Order Confirmed!");
+}
+
+function cancelBuy() {
+    window.location.href = "mariya.html";
+}
+</script>
+
+</body>
+</html>
